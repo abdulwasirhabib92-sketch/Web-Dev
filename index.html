@@ -50,7 +50,11 @@
   <h2 id="title">Dealers in luxury clothing and other Wares</h2>
     <h3 id="message"></h3>
   <p>We provide you with the best set of outfits to choose from.</p>
-    <img src="https://i.pinimg.com/originals/5f/25/0c/5f250cd8d3dc80251de86a68a86bdee7.jpg" width="300" alt="Images of Available styles">
+    <img id="productImage" src="https://i.pinimg.com/originals/5f/25/0c/5f250cd8d3dc80251de86a68a86bdee7.jpg" width="300" >
+    <p id="Text">Images of Available styles</p>
+    <button onclick="changeContent()">Tap Roll</button>
+
+      
   </section>
     
     <footer>
@@ -63,6 +67,9 @@
   <script>
     function sayHello() 
     {document.getElementById("text").innerText="Hello!";}
+    function changeContent()
+    {document.getElementById("Text").innerText="New Item";
+    document.getElementById("productImage").src="https://www.bing.com/th/id/OIP.DWQ-d9MExRn6tu5eiHhlXgHaNK?w=193&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"}
   </script>
   
 </html>
