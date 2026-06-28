@@ -26,6 +26,7 @@
     
     <title>My first Website</title>
   </head>
+
   
   <body>
     <header><h1>MIMEE'S COLLECTIONS</h1></header>
@@ -36,7 +37,10 @@
     <button class="shop-btn"
     onclick="alert('Welcome to MIMEE\'S COLLECTIONS!')"  
       >Shop Now</button>
-     <button onclick="document.getElementById('title').innerText='Welcome!'">Change h2</button>
+<button onclick="sayHello()">Click Me</button>
+     <p id="text"></p>
+     
+     <button onclick="document.getElementById('title').innerText='Welcome!'">Change Title</button>
      <button onclick="document.getElementById('message').innerText='New Arrival: Luxury Dresses'">Dresses</button>
      <button onclick="document.getElementById('message').innerText='Men Fashion Collection'">MensWare</button>
      <button onclick="document.getElementById('message').innerText='Bags and Acessories'">Acessories</button>
@@ -55,4 +59,10 @@
 
     
   </body>
+  
+  <script>
+    function sayHello() 
+    {document.getElementById("text").innerText="Hello!";}
+  </script>
+  
 </html>
