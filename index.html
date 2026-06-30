@@ -22,6 +22,8 @@
        .shop-btn:hover{background-color:darkblue;
                       transform:scale(1.05);
                       }
+      img{
+        transition: 0.5s;}
     </style>
     
     <title>My first Website</title>
@@ -38,12 +40,12 @@
     onclick="alert('Welcome to MIMEE\'S COLLECTIONS!')"  
       >Shop Now</button>
 <button onclick="sayHello()">Click Me</button>
-     <p id="text"></p>
+     
      
      <button onclick="document.getElementById('title').innerText='Welcome!'">Change Title</button>
-     <button onclick="document.getElementById('message').innerText='New Arrival: Luxury Dresses'">Dresses</button>
-     <button onclick="document.getElementById('message').innerText='Men Fashion Collection'">MensWare</button>
-     <button onclick="document.getElementById('message').innerText='Bags and Acessories'">Acessories</button>
+     <button onclick="changeImage('https://i.pinimg.com/originals/5f/25/0c/5f250cd8d3dc80251de86a68a86bdee7.jpg','Luxury Dresses')">Dresses</button>
+     <button onclick="changeImage('https://www.bing.com/th/id/OIP.3k9YcR7k9zV6pYkMenWear.jpg','Men Fashion Collection')">MensWare</button>
+     <button onclick="changeImage('https://www.bing.com/th/id/OIP.bagImageExample.jpg','Bags and Acessories')">Acessories</button>
   </nav>
     
   <section>
@@ -51,7 +53,7 @@
     <h3 id="message"></h3>
   <p>We provide you with the best set of outfits to choose from.</p>
     <img id="productImage" src="https://i.pinimg.com/originals/5f/25/0c/5f250cd8d3dc80251de86a68a86bdee7.jpg" width="300" >
-    <p id="Text">Images of Available styles</p>
+    <p id="text">Images of Available styles</p>
     <button onclick="changeContent()">Tap Roll</button>
 
       
@@ -68,8 +70,10 @@
     function sayHello() 
     {document.getElementById("text").innerText="Hello!";}
     function changeContent()
-    {document.getElementById("Text").innerText="New Item";
-    document.getElementById("productImage").src="https://www.bing.com/th/id/OIP.DWQ-d9MExRn6tu5eiHhlXgHaNK?w=193&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"}
+    
+   <button onclick="changeImage('https://www.bing.com/th/id/OIP.DWQ-d9MExRn6tu5eiHhlXgHaNK?w=193&h=333&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2','New Item')">Tap Roll</button>
+    function changeImage(imgSrc,textMsg){document.getElementById("productImage").src=imgSrc;
+                             document.getElementById("text").innerText=textMsg;}
   </script>
   
 </html>
